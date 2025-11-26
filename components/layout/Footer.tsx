@@ -13,61 +13,62 @@ const socialIcons = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-background" style={{ marginLeft: '6px' }}>
-      <div className="max-w-[1400px] mx-auto px-16 py-12">
+    <footer className="border-t border-border bg-background">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-xl font-bold text-white">∞</span>
+          <div className="col-span-1 sm:col-span-2 md:col-span-2">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4">
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-md bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                <span className="text-base sm:text-xl font-bold text-white">∞</span>
               </div>
-              <span className="text-lg font-semibold">{COMPANY_INFO.name}</span>
+              <span className="text-base sm:text-lg font-semibold">{COMPANY_INFO.name}</span>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-4 max-w-md">
+            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-4 max-w-md">
               {COMPANY_INFO.description}
             </p>
             <a
               href={`mailto:${COMPANY_INFO.email}`}
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm text-primary hover:text-primary/80 transition-colors touch-manipulation"
             >
               <Mail size={16} />
-              {COMPANY_INFO.email}
+              <span className="hidden sm:inline">{COMPANY_INFO.email}</span>
+              <span className="sm:hidden">Contact Us</span>
             </a>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
+          <div className="col-span-1">
+            <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:gap-3">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/team" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   Team
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/about" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/portfolio" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/contact" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -75,9 +76,9 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <div className="flex gap-3">
+          <div className="col-span-1">
+            <h3 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Follow Us</h3>
+            <div className="flex gap-2 sm:gap-3">
               {SOCIAL_LINKS.map((social) => {
                 const Icon = socialIcons[social.icon as keyof typeof socialIcons];
                 return (
@@ -86,7 +87,7 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-all hover:scale-110"
+                    className="w-9 sm:w-10 h-9 sm:h-10 rounded-full bg-muted hover:bg-primary/20 flex items-center justify-center transition-all hover:scale-110 touch-manipulation"
                     aria-label={social.name}
                   >
                     <Icon size={18} className="text-foreground hover:text-primary transition-colors" />
@@ -98,11 +99,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground text-center md:text-left">
+        <div className="pt-6 sm:pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
+          <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>
