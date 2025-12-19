@@ -182,7 +182,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Visit Us</h3>
                     <p className="text-muted-foreground">
-                      Bankra, West Bengal
+                      Kolkata, West Bengal
                       <br />
                       India
                     </p>
