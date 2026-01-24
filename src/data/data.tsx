@@ -1224,6 +1224,7 @@ export const products: Product[] = [
     ],
     highlights:
       "50GB offline storage, FIR auto-classification, semantic search, crime prediction, 12-level hierarchy",
+    demoUrl: "https://npdms.infinititechpartners.com",
   },
 ];
 
