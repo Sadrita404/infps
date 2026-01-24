@@ -44,6 +44,7 @@ import {
   Calendar,
   ClipboardList,
   Cpu,
+  ShieldCheck,
   type LucideProps,
 } from "lucide-react";
 
@@ -93,6 +94,7 @@ const iconMap = {
   calendar: Calendar,
   "clipboard-list": ClipboardList,
   cpu: Cpu,
+  "shield-check": ShieldCheck,
 } as const;
 
 export type IconName = keyof typeof iconMap;

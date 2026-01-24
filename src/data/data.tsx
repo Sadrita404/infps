@@ -1205,6 +1205,26 @@ export const products: Product[] = [
     highlights: "NABH/JCI compliance, multi-branch, complete EMR, 15+ modules",
     demoUrl: "https://hospital-vnyb.vercel.app/",
   },
+  {
+    slug: "npdms",
+    name: "NPDMS",
+    tagline: "National Police Data Management System",
+    category: "Government / Law Enforcement / AI",
+    icon: "shield-check",
+    desc: "Offline-first police management system with AI/ML capabilities for managing FIRs, cases, evidence, warrants, forensics, and crime prediction.",
+    gradient: "linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)",
+    features: ["Offline-First PWA", "AI/ML Features", "14 Modules", "12-Level RBAC"],
+    technologies: [
+      "Next.js 16",
+      "Go",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "FAISS",
+    ],
+    highlights:
+      "50GB offline storage, FIR auto-classification, semantic search, crime prediction, 12-level hierarchy",
+  },
 ];
 
 // Product Details
@@ -2408,6 +2428,115 @@ export const productDetails: ProductDetail[] = [
       { label: "Support Services", value: "8" },
       { label: "User Roles", value: "15+" },
       { label: "Standards", value: "HL7/FHIR/DICOM" },
+    ],
+  },
+  {
+    slug: "npdms",
+    heroTitle: "NPDMS",
+    heroSubtitle: "National Police Data Management System",
+    heroDescription:
+      "Complete offline-first police management system with AI/ML capabilities for managing FIRs, cases, evidence, warrants, and more with intelligent features for classification, semantic search, and crime prediction",
+    modules: [
+      {
+        icon: "file-text",
+        title: "FIR Management",
+        description:
+          "Register and track First Information Reports with voice input, document scanning, evidence attachments, and AI-powered auto-classification into 8 crime categories.",
+      },
+      {
+        icon: "briefcase",
+        title: "Case Management",
+        description:
+          "Manage investigations and case files with linking to FIRs, accused tracking, witness management, and complete audit trail.",
+      },
+      {
+        icon: "search",
+        title: "Evidence Tracking",
+        description:
+          "Complete chain of custody management with transfer workflows, forensic lab requests, and secure evidence storage via MinIO.",
+      },
+      {
+        icon: "clipboard-list",
+        title: "Warrant Management",
+        description:
+          "Track arrest, search, summons, and non-bailable warrants with status updates, execution tracking, and court integration.",
+      },
+      {
+        icon: "calendar",
+        title: "Court & Bail",
+        description:
+          "Manage bail applications, court hearings, orders, and case dispositions with complete status tracking and scheduling.",
+      },
+      {
+        icon: "brain",
+        title: "AI/ML Features",
+        description:
+          "FIR auto-classification, IPC section suggestions, semantic search for similar cases using FAISS, crime prediction, and hotspot identification.",
+      },
+    ],
+    portals: [
+      {
+        title: "Operational Modules",
+        description: "Core police operations and case management",
+        features: [
+          "FIR registration and tracking",
+          "Case investigation management",
+          "Evidence chain of custody",
+          "Warrant execution tracking",
+          "Bail application processing",
+          "Court hearing management",
+        ],
+      },
+      {
+        title: "Support Services",
+        description: "Personnel, vehicles, and infrastructure",
+        features: [
+          "Personnel management with 12-level RBAC",
+          "Duty scheduling and roster management",
+          "Vehicle fleet tracking with GPS",
+          "Armoury and ammunition management",
+          "Alert broadcast system (FLASH, BOLO)",
+          "Lookout and wanted persons registry",
+        ],
+      },
+      {
+        title: "Intelligence & Analytics",
+        description: "AI-powered insights and predictions",
+        features: [
+          "Crime statistics dashboards",
+          "Hotspot identification for patrols",
+          "Crime prediction and forecasting",
+          "Semantic search across FIRs",
+          "GIS mapping and visualization",
+          "Real-time analytics and reports",
+        ],
+      },
+    ],
+    completeFeatures: [
+      "FIR Management",
+      "Case Management",
+      "Evidence Tracking",
+      "Warrant Management",
+      "Bail Management",
+      "Forensics Integration",
+      "Personnel Management",
+      "Vehicle Tracking",
+      "Court Hearings",
+      "Alert System",
+      "Analytics Dashboard",
+      "Lookout Registry",
+      "GIS Mapping",
+      "Offline-First PWA",
+      "AI Classification",
+      "Semantic Search",
+      "Crime Prediction",
+      "12-Level RBAC",
+    ],
+    stats: [
+      { label: "Core Modules", value: "14" },
+      { label: "AI/ML Services", value: "3" },
+      { label: "RBAC Levels", value: "12" },
+      { label: "Offline Storage", value: "50GB+" },
     ],
   },
 ];
