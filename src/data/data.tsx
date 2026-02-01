@@ -1184,7 +1184,7 @@ export const products: Product[] = [
     ],
     highlights:
       "ANPR with <100ms latency, hardware control, predictive analytics, multi-tenant",
-    demoUrl: "https://smart-parking-xi-pearl.vercel.app",
+    demoUrl: "https://sparking-rust.vercel.app/",
   },
   {
     slug: "hospital-erp",
